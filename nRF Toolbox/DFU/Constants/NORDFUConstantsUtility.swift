@@ -10,7 +10,7 @@ import UIKit
 
 class NORDFUConstantsUtility: NSObject {
 
-    let dfuServiceUUIDString    = "00001530-1212-EFDE-1523-785FEABCD123"
+    let dfuServiceUUIDString    = "0000FE59-0000-1000-8000-00805F9B34FB"
     let ancSServiceUUIDString   = "7905F431-B5CE-4E99-A40F-4B1E122D00D0"
 
     static func getDFUHelpText() -> String {

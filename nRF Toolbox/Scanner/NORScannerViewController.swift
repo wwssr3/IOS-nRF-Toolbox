@@ -32,7 +32,7 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 class NORScannerViewController: UIViewController, CBCentralManagerDelegate, UITableViewDelegate, UITableViewDataSource {
 
-    let dfuServiceUUIDString  = "00001530-1212-EFDE-1523-785FEABCD123"
+    let dfuServiceUUIDString  = "0000FE59-0000-1000-8000-00805F9B34FB"
     let ANCSServiceUUIDString = "7905F431-B5CE-4E99-A40F-4B1E122D00D0"
 
     //MARK: - ViewController Properties
@@ -180,6 +180,7 @@ class NORScannerViewController: UIViewController, CBCentralManagerDelegate, UITa
         bluetoothManager!.stopScan()
         // Call delegate method
         let peripheral = peripherals[indexPath.row].peripheral
+        bluetoothManager?.connect(peripheral, options: nil);
         self.delegate?.centralManagerDidSelectPeripheral(withManager: bluetoothManager!, andPeripheral: peripheral)
         self.dismiss(animated: true, completion: nil)
     }
